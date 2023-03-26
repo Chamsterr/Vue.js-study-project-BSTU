@@ -1,0 +1,98 @@
+.header {
+    position: relative;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    background-color: #c8a35f;
+  }
+  /* -------------------------РУС ENG FRA ---------8 (800) 123-45-67---------------sales@log.ru--------- */
+  
+  /* Блок с языками, номером и почтой */
+  .contacts {
+    font-size: 12px;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0 15px 0 15px;
+  }
+  
+  /* Почта */
+  .email {
+    margin-right: 15px;
+  }
+  
+  /* Языки сайта */
+  .language:not(:last-child) {
+    margin-right: 10px;
+  }
+  /* -------------------------ЛОГО | Наши офисы ---------УСЛУГИ О КОМПАНИИ ВАКАНСИИ КОНТАКТЫ-------- */
+  
+  /* Навигационный блок */
+  .menu-items {
+    height: 85px;
+    display: flex;
+    padding: 0 15px 0 15px;
+  }
+  
+  /* Логотип */
+  .logo {
+    padding-right: 30px;
+    margin-right: 30px;
+    border-right: 1px solid #f2f2f2;
+  }
+  
+  /* Гугл метка */
+  .placemark {
+    padding-right: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Блок с лого, меткой и "Наши офисы" */
+  .flexstarItems {
+    margin-right: auto;
+    align-items: center;
+    display: flex;
+  }
+  
+  /* УСЛУГИ О КОМПАНИИ ВАКАНСИИ КОНТАКТЫ */
+  .flexendItems {
+    margin-left: auto;
+    align-items: center;
+    display: flex;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+  }
+  .navigation {
+    position: relative;
+    padding-bottom: 2px;
+    margin-right: 30px;
+    font-size: 14px;
+  }
+  .navigation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c8a35f;
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform-origin: left;
+  }
+  
+  .navigation:hover::after {
+    width: 100%;
+    transform: scaleX(1);
+  }
+  /* СТИЛИ ПРИ НАВЕДЕНИИ НА "Наши офисы" */
+  .placemark-hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease-in-out;
+  }
