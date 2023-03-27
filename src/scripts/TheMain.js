@@ -1,7 +1,9 @@
 import ImageCarousel from "../components/ImageCarousel";
+import NewImageCarousel from "../components/NewImageCarousel";
 export default {
   components: {
     ImageCarousel,
+    NewImageCarousel
   },
   props: {
     title: {

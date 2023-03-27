@@ -1,20 +1,28 @@
+
+import ImageCarousel from './NewImageCarousel.vue';
+
 <template>
   <main class="main">
-    <ImageCarousel :images="images" />
-    <div class="wrapper">
-      <div class="mainTitle">
-        <h1>{{ title }}</h1>
-        <h4>
-          {{ subtitle }}
-        </h4>
+    <NewImageCarousel :images="images">
+      <div class="wrapper">
+        <div class="mainTitle">
+          <h1>{{ title }}</h1>
+          <h4>
+            {{ subtitle }}
+          </h4>
+        </div>
       </div>
-      <!-- тут Никита продолжает работу -->
+    </NewImageCarousel>
+    <div class="infoBlock">
+      <div class="services" >
+
+      </div>
+      <div class="greyBlock"></div>
+      <div class="greyBlock"></div>
     </div>
   </main>
 </template>
 
-<script src="../scripts/TheMain">
-import '../scripts/TheHeader'
-</script>
+<script src="../scripts/TheMain"></script>
 
 <style src="../styles/TheMain.css"></style>
