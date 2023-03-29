@@ -1,10 +1,9 @@
-
 import ImageCarousel from './NewImageCarousel.vue';
 
 <template>
   <main class="main">
     <NewImageCarousel :images="images">
-      <div class="wrapper">
+      <div class="wrapper2">
         <div class="mainTitle">
           <h1>{{ title }}</h1>
           <h4>
@@ -14,8 +13,7 @@ import ImageCarousel from './NewImageCarousel.vue';
       </div>
     </NewImageCarousel>
     <div class="infoBlock">
-      <div class="services" >
-
+      <div class="services">
       </div>
       <div class="greyBlock"></div>
       <div class="greyBlock"></div>
