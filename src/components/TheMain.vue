@@ -1,5 +1,3 @@
-import ImageCarousel from './NewImageCarousel.vue';
-
 <template>
   <main class="main">
     <NewImageCarousel :images="images">
@@ -12,12 +10,8 @@ import ImageCarousel from './NewImageCarousel.vue';
         </div>
       </div>
     </NewImageCarousel>
-    <div class="infoBlock">
-      <div class="services">
-      </div>
-      <div class="greyBlock"></div>
-      <div class="greyBlock"></div>
-    </div>
+    <InfoBlock :titles="titles" :subtitles="subtitles" :services="services" :langIndex="langIndex" :serviceTitle="serviceTitle"></InfoBlock>
+
   </main>
 </template>
 

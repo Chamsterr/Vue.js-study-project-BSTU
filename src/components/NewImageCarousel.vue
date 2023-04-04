@@ -1,11 +1,10 @@
 <template>
-    <div class="Slider" :style="{ backgroundImage: 'url(' + bgImage + ')' }">
-        <div class="Slider__image" v-for="(image, index) in images" :key="index"
-            :style="{ backgroundImage: 'url(' + image + ')' }" :class="{ 'Slider__image--active': index === activeIndex }">
-        </div>
+    <div class="Slider" :style="backgroundStyle" :class="{ transition: isTransitioning }">
         <slot></slot>
+        
     </div>
 </template>
+  
 <script>
 export default {
     props: {
@@ -16,9 +15,18 @@ export default {
     },
     data() {
         return {
-            bgImage: this.images[0], // начальный цвет фона
-            activeIndex: 0, // начальный индекс изображения
-            intervalId: null // начальное значение для идентификатора интервала
+            bgImage: this.images[0],
+            bgGradient: "linear-gradient(0deg, rgba(47, 52, 58, 0.75), rgba(47, 52, 58, 0.75))",
+            activeIndex: 0,
+            intervalId: null,
+            isTransitioning: false
+        }
+    },
+    computed: {
+        backgroundStyle() {
+            return {
+                backgroundImage: `url(${this.bgImage})`
+            }
         }
     },
     mounted() {
@@ -31,15 +39,21 @@ export default {
         startCarousel() {
             this.intervalId = setInterval(() => {
                 this.nextImage()
-            }, 11000)
+            }, 8000)
         },
-        nextImage() {
-            this.activeIndex = (this.activeIndex + 1) % this.images.length
-            this.bgImage = this.images[this.activeIndex]
-        }
+    nextImage() {
+        this.activeIndex = (this.activeIndex + 1) % this.images.length
+        this.bgImage = this.images[this.activeIndex]
+        this.isTransitioning = true
+        setTimeout(() => {
+        this.isTransitioning = false
+    }, 4000)
+}
     }
 }
 </script>
+  
+  
 <style>
 .Slider {
     height: 455px;
@@ -47,22 +61,11 @@ export default {
     background-size: cover;
     background-position: center;
     position: relative;
-    transition: opacity 4s ease;
+    transition:all 0.5s ease;
 }
 
-.Slider__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 4s ease;
-}
-
-.Slider__image--active {
-    opacity: 0.5;
+.Slider.transition {
+    transition: background-image 5s ease;
 }
 </style>
+  

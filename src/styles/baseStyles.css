@@ -3,6 +3,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 body,
@@ -108,4 +109,13 @@ img {
 
 .main {
   flex: 1 1 auto;
+}
+
+::-webkit-scrollbar {
+  background:#2F343A;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background:#C8A35F;
+  border-top: 8px;
 }

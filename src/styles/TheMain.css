@@ -24,31 +24,6 @@
   height: 295px;
 }
 
-.infoBlock {
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-}
-
-.greyBlock {
-  background-color: #393F47;
-  width: 650px;
-  height: 560px;
-}
-
-.services {
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 50%;
-  border: 2px solid #c8a35f;
-  transform: translate(-50%, -50%);
-  width: 950px;
-  height: 295px;
-}
-
 /* ЗАГОЛОВОК */
 h1 {
   text-align: center;

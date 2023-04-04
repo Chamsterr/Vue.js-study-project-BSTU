@@ -1,5 +1,9 @@
 export default {
   props: {
+    langIndex: {
+      type: Int16Array,
+      default: 0
+    },
     languages: {
       type: Array,
       default: () => [
@@ -19,16 +23,20 @@ export default {
     navigation: {
       type: Array,
       default: () => [
-        { id: "#УСЛУГИ", name: "УСЛУГИ" },
-        { id: "#О КОМПАНИИ", name: "О КОМПАНИИ" },
-        { id: "#ВАКАНСИИ", name: "ВАКАНСИИ" },
-        { id: "#КОНТАКТЫ", name: "КОНТАКТЫ" },
+        { id: "#УСЛУГИ", name: ["УСЛУГИ", "SERVICES"] },
+        { id: "#О КОМПАНИИ", name: ["О КОМПАНИИ", "About us"] },
+        { id: "#ВАКАНСИИ", name: ["ВАКАНСИИ"] },
+        { id: "#КОНТАКТЫ", name: ["КОНТАКТЫ"] },
       ],
     },
+    changeLang: {
+      type: Function,
+      required: true
+    }
   },
   data() {
     return {
       isHovered: false,
     };
-  },
+  }
 };
