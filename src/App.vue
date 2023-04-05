@@ -1,30 +1,32 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <footer class="footer">
+      <div>
+      <leaflet-map :lng="-0.09" :lat="51.505" :zoom="13" />
+      </div>
+        <!--    <p>Text</p>-->
+    </footer>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import LeafletMap from "@/components/map.vue";
+export default {
+  components : {
+    LeafletMap,
+  },
+  name: "App.vue",
 }
+</script>
 
-nav {
-  padding: 30px;
-}
+<style scoped>
+  .footer {
+    position: relative;
+    border: 2px solid black;
+    width: 100%;
+    height: 350px;
+    margin: 0;
+    padding: 0;
+  }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
