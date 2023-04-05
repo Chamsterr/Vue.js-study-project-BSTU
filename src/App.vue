@@ -2,7 +2,7 @@
   <div>
     <footer class="footer">
       <div>
-      <leaflet-map :lng="-0.09" :lat="51.505" :zoom="13" />
+      <leaflet-map :lng="-0.09" :lat="51.505" :zoom="10" />
       </div>
         <!--    <p>Text</p>-->
     </footer>

@@ -20,7 +20,7 @@ export default {
     },
     zoom: {
       type: Number,
-      default: 13
+      default: 10
     }
   },
 
