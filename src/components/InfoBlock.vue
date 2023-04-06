@@ -4,7 +4,7 @@
             <div class="region">
                 <h2 class="serviceTitle" v-html="titles[index][langIndex]"></h2>
                 <div class="serviceInfo" v-html="subtitles[index][langIndex]"></div>
-                <button v-bind:class="{ 'hoveredNext': isHoveredButton }" v-on:mouseover="isHoveredButton = true"
+                <button v-bind:class="{ 'hovered': isHoveredButton }" v-on:mouseover="isHoveredButton = true"
                     v-on:mouseout="isHoveredButton = false" class="serviceButton">
                     {{ buttonText[langIndex] }}
                 </button>

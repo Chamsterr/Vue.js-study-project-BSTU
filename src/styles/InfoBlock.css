@@ -97,7 +97,9 @@
   right: 0px;
   bottom: 0px;
 }
-
+.hovered {
+  transform: scale(1.1);
+}
 .hoveredNext {
   transform: translate(10px, 0);
 }
