@@ -3,16 +3,20 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  color: white;
 }
+
 body,
 html {
   height: 100%;
 }
+
 a,
 a:visited {
   text-decoration: none;
   color: inherit;
 }
+
 /* h1,
 h2,
 h3,
@@ -91,16 +95,27 @@ img {
   margin: 0 auto;
   background-color: #2F343A;
 }
+
 .wrapper {
   max-width: 1140px;
   margin: 0 auto;
+  color: white;
   position: relative;
+}
+
+.wrapper2 {
   color: white;
 }
+
 .main {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
-
-
-
+::-webkit-scrollbar {
+  background:#2F343A;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background:#C8A35F;
+  border-top: 8px;
+}

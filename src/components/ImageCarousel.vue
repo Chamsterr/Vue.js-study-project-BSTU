@@ -1,12 +1,8 @@
 <template>
   <div class="gallery">
-    <div
-      class="gallery__image"
-      v-for="(image, index) in images"
-      :key="index"
-      :style="{ backgroundImage: 'url(' + image + ')' }"
-      :class="{ 'gallery__image--active': index === activeIndex }"
-    ></div>
+    <div class="gallery__image" v-for="(image, index) in images" :key="index"
+      :style="{ backgroundImage: 'url(' + image + ')' }" :class="{ 'gallery__image--active': index === activeIndex }">
+    </div>
   </div>
 </template>
 
@@ -18,24 +14,24 @@ export default {
       default: () => []
     }
   },
-  data () {
+  data() {
     return {
       activeIndex: 0
     }
   },
-  mounted () {
+  mounted() {
     this.startCarousel()
   },
-  beforeUnmount () {
+  beforeUnmount() {
     clearInterval(this.intervalId)
   },
   methods: {
-    startCarousel () {
+    startCarousel() {
       this.intervalId = setInterval(() => {
         this.nextImage()
       }, 10000)
     },
-    nextImage () {
+    nextImage() {
       this.activeIndex = (this.activeIndex + 1) % this.images.length
     }
   }
