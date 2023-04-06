@@ -1,32 +1,30 @@
 <template>
-  <div>
-    <footer class="footer">
-      <div>
-      <leaflet-map :lng="-0.09" :lat="51.505" :zoom="10" />
-      </div>
-        <!--    <p>Text</p>-->
-    </footer>
-  </div>
+  <TheHeader :langIndex="langIndex" :changeLang="changeLang"/>
+  <TheMain :langIndex="langIndex"/>
+  <TheFooter :langIndex="langIndex"/>
 </template>
 
 <script>
-import LeafletMap from "@/components/map.vue";
+  import TheHeader from './components/TheHeader.vue'
+  import TheMain from './components/TheMain.vue'
+  import TheFooter from './components/TheFooter.vue'
+
 export default {
-  components : {
-    LeafletMap,
+  data () {
+    return {
+      langIndex: 0
+    }
   },
-  name: "App.vue",
+  methods: {
+    changeLang: function (newIndex) {
+      this.langIndex = newIndex
+    },
+  },
+  components: {
+    TheHeader,
+    TheMain,
+    TheFooter
+  }
 }
 </script>
 
-<style scoped>
-  .footer {
-    position: relative;
-    border: 2px solid black;
-    width: 100%;
-    height: 350px;
-    margin: 0;
-    padding: 0;
-  }
-
-</style>

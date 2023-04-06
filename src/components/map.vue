@@ -7,6 +7,7 @@
 <script>
 import L from 'leaflet'
 import "leaflet/dist/leaflet.css"
+
 export default {
   name: 'LeafletMap',
   props: {
@@ -20,7 +21,7 @@ export default {
     },
     zoom: {
       type: Number,
-      default: 10
+      default: 13
     }
   },
 
@@ -47,29 +48,23 @@ export default {
           tile.src = tile.src;
         }
       });
+
+      L.marker([this.lat, this.lng], {
+        icon: L.icon({
+          iconUrl: './src/images/marker_map_icon.png',
+          iconSize: [38, 95],
+          iconAnchor: [22, 94],
+          popupAnchor: [-3, -76]
+        })
+      }).addTo(this.map);
+
+      this.map.on('layeradd', function(event) {
+        console.log('Layer added', event);
+      });
     }
   }
 }
 
 </script>
 
-<style scoped>
-  .map-container {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-  }
-  .leaflet-container{
-    overflow: hidden;
-  }
-  .leaflet-tile {
-    overflow: hidden;
-    filter: grayscale(100%) contrast(1.2) brightness(90%);
-  }
-
-</style>
+<style src="../styles/TheFooter.css"></style>

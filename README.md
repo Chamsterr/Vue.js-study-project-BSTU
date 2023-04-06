@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vue_project
 
 ## Project setup
@@ -17,3 +18,10 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# Vue.js-study-project-BSTU
+
+1dad
+
+chush
+>>>>>>> origin/kovkel

@@ -1,0 +1,148 @@
+.infoBlock {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.greyBlock {
+  background-color: #393F47;
+  width: 650px;
+  height: 560px;
+}
+
+.services {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  /* border: 2px solid #c8a35f; */
+  transform: translate(-50%, -50%);
+  width: 1050px;
+  height: auto;
+}
+
+.region {
+  display: grid;
+  position: relative;
+}
+
+.serviceTitle {
+  grid-row-start: 1;
+  grid-column-start: 0;
+  font-size: 40px;
+  line-height: 49.22px;
+}
+
+.serviceButton {
+  cursor: pointer; 
+  background: #C8A35F;
+  width: 220px;
+  height: 55px;
+  grid-row-start: 3;
+  font-size: 16px;
+}
+
+.serviceInfo {
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+
+.serviceImg {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+
+.servicePrevius span,
+.serviceNext span {
+  color: #C8A35F;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.servicePrevius img,
+.serviceNext img {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.serviceNext {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.servicePrevius {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.hovered {
+  transform: scale(1.1);
+}
+
+.servicesDetails {
+  height: 550px;
+  background-color: #2F343A;
+  position: relative;
+}
+
+.servicesDetails h2 {
+  padding: 40px 0 40px 0;
+}
+
+
+.servicesTiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  height: 360px;
+}
+
+
+
+
+
+.tile {
+  background-color: #393F47;
+  padding: 20px;
+  color: #fff;
+  margin: 0 1px 1px 0;
+  height: min(180px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.tile img {
+  height: 70px;
+  margin-bottom: 4%;
+}
+
+.tile h5 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.tile:hover {
+  background-color: #C8A35F;
+}
