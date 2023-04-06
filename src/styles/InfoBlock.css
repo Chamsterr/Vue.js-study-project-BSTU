@@ -106,6 +106,11 @@
 .hoveredPrev {
   transform: translate(-10px, 0);
 }
+.blocks div.hoveredTile {
+  transform: scale(1.1);
+  z-index: 2;
+  position: relative;
+}
 .servicesDetails {
   min-height: 500px;
   background-color: #2F343A;
@@ -183,7 +188,7 @@
 }
 .blocks {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   width: 30%;
   color: black;
 }
@@ -196,12 +201,14 @@
   width: 150px;
   height: 150px;
   color: black;
+  position: relative;
+  z-index: 1;
 }
+
 .block1, .block2, .block5 {
   background-color: white;
   justify-content: center;
   align-content: center;
-  z-index: 2;
 }
 .block3, .block4 {
   background-size: cover;

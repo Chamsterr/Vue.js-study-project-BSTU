@@ -48,19 +48,26 @@
     <div class="greyArea"></div>
 
     <div class="blocks">
-      <div class="block1">
+      <div class="block1" v-bind:class="{'hoveredTile': isHoveredTile1}" v-on:mouseover="isHoveredTile1 = true"
+      v-on:mouseout="isHoveredTile1 = false">
         <h3> {{blocks[langIndex][0][0]}} </h3>
         <h4> {{blocks[langIndex][0][1]}} </h4>
         <h5> {{blocks[langIndex][0][2]}} </h5>
       </div>
-      <div class="block2">
+      <div class="block2" v-bind:class="{'hoveredTile': isHoveredTile2}" v-on:mouseover="isHoveredTile2 = true"
+           v-on:mouseout="isHoveredTile2 = false">
         <h3> {{blocks[langIndex][1][0]}} </h3>
         <h4> {{blocks[langIndex][1][1]}} </h4>
         <h5> {{blocks[langIndex][1][2]}} </h5>
       </div>
-      <div class="block3" v-bind:style="{ backgroundImage: 'url(' + imageUrl + ')' }"> </div>
-      <div class="block4" v-bind:style="{ backgroundImage: 'url(' + imageUrl + ')' }"> </div>
-      <div class="block5">
+      <div class="block3" v-bind:style="{ backgroundImage: 'url(' + imageUrl + ')' }"
+           v-bind:class="{'hoveredTile': isHoveredTile3}" v-on:mouseover="isHoveredTile3 = true"
+           v-on:mouseout="isHoveredTile3 = false"> </div>
+      <div class="block4" v-bind:style="{ backgroundImage: 'url(' + imageUrl + ')' }"
+           v-bind:class="{'hoveredTile': isHoveredTile4}" v-on:mouseover="isHoveredTile4 = true"
+           v-on:mouseout="isHoveredTile4 = false"> </div>
+      <div class="block5" v-bind:class="{'hoveredTile': isHoveredTile5}" v-on:mouseover="isHoveredTile5 = true"
+           v-on:mouseout="isHoveredTile5 = false">
         <h3> {{blocks[langIndex][2][0]}} </h3>
         <h4> {{blocks[langIndex][2][1]}} </h4>
         <h5> {{blocks[langIndex][2][2]}} </h5>
