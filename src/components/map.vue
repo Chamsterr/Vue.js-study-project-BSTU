@@ -1,12 +1,10 @@
 <template>
-  <div>
     <div class="map-container" ref="map"></div>
-    </div>
 </template>
 
 <script>
-import L from 'leaflet'
-import "leaflet/dist/leaflet.css"
+import L from 'leaflet';
+import "leaflet/dist/leaflet.css";
 
 export default {
   name: 'LeafletMap',
@@ -38,7 +36,7 @@ export default {
       this.map.on('load', () => {
         const tiles = document.getElementsByClassName('leaflet-tile')
         for (let i = 0; i < tiles.length; i++) {
-          tiles[i].style.filter = 'grayscale(100%) contrast(1.2) brightness(90%)'
+          tiles[i].style.filter = 'grayscale(0%) contrast(0) brightness(90%)'
 
         }
       })
@@ -51,8 +49,8 @@ export default {
 
       L.marker([this.lat, this.lng], {
         icon: L.icon({
-          iconUrl: './src/images/marker_map_icon.png',
-          iconSize: [38, 95],
+          iconUrl: "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-256.png",
+          iconSize: [38, 45],
           iconAnchor: [22, 94],
           popupAnchor: [-3, -76]
         })

@@ -1,13 +1,14 @@
 <template>
-
+    <div class="info-container" ref="block">  </div>
 </template>
 
 <script>
 export default {
-  name: "company_info_block"
+  name: "CompanyInfoBlock",
+  props: {
+
+  }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style src="../styles/TheFooter.css"></style>
