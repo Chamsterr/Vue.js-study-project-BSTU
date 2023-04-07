@@ -34,7 +34,6 @@ export default {
         { id: "#КОМПАНИИ", name: ["О КОМПАНИИ", "ABOUT US", "À PROPOS DE L'ENTREPRISE"] },
         { id: "#ВАКАНСИИ", name: ["ВАКАНСИИ", "VACANCIES", "VACANCES"] },
         { id: "#КОНТАКТЫ", name: ["КОНТАКТЫ", "CONTACTS", "CONTACTS"] },
-        {id: "#УСЛУГИ", name: ["УСЛУГИ", "SERVICES", "SERVICE"]}
       ],
     },
     offices: {
