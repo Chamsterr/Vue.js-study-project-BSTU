@@ -119,3 +119,7 @@ img {
   background:#C8A35F;
   border-top: 8px;
 }
+
+.language{
+  cursor: pointer;
+}

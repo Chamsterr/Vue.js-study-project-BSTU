@@ -6,7 +6,7 @@
                 <div class="serviceInfo" v-html="subtitles[index][langIndex]"></div>
                 <button v-bind:class="{ 'hovered': isHoveredButton }" v-on:mouseover="isHoveredButton = true"
                     v-on:mouseout="isHoveredButton = false" class="serviceButton">
-                    {{ buttonText[langIndex] }}
+                    <a href="#КОМПАНИИ">{{ buttonText[langIndex] }}</a>
                 </button>
                 <img src="../images/Rectangle2.svg" alt="" class="serviceImg">
                 <img :src="'../img/Rectangle' + index + '.svg'" alt="" class="serviceImg">
@@ -28,7 +28,7 @@
     </div>
     <div class="servicesDetails">
         <div class="services">
-            <h2>{{ serviceTitle[langIndex] }}</h2>
+            <h2 id="УСЛУГИ">{{ serviceTitle[langIndex] }}</h2>
             <div class="servicesTiles">
                 <div class="tile" v-for="item in services[index][langIndex]">
                     <img src="../images/tileSvg.svg" alt="">
@@ -41,7 +41,7 @@
   <div class="aboutCompany">
     <div class="discription">
       <span></span>
-      <h2 class="discriptionTitle">{{discriptionTitle[langIndex]}}</h2>
+      <h2 id="КОМПАНИИ" class="discriptionTitle">{{discriptionTitle[langIndex]}}</h2>
       <p class="discriptionText"> {{discriptionText[langIndex]}} </p>
     </div>
 

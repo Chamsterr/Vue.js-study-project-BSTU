@@ -3,12 +3,12 @@ export default {
     setLangIndex(index) {
       console.log(index)
       this.$store.commit("setLangIndex", parseInt(index));
-    }  
+    }
   },
   computed: {
     langIndex() {
-    return this.$store.getters.getLangIndex
-  }  
+      return this.$store.getters.getLangIndex
+    }
   },
   props: {
     languages: {
@@ -30,11 +30,15 @@ export default {
     navigation: {
       type: Array,
       default: () => [
-        { id: "#УСЛУГИ", name: ["УСЛУГИ", "SERVICES"] },
-        { id: "#О КОМПАНИИ", name: ["О КОМПАНИИ", "About us"] },
-        { id: "#ВАКАНСИИ", name: ["ВАКАНСИИ"] },
-        { id: "#КОНТАКТЫ", name: ["КОНТАКТЫ"] },
+        { id: "#УСЛУГИ", name: ["УСЛУГИ", "SERVICES", "SERVICE"] },
+        { id: "#КОМПАНИИ", name: ["О КОМПАНИИ", "ABOUT US", "À PROPOS DE L'ENTREPRISE"] },
+        { id: "#ВАКАНСИИ", name: ["ВАКАНСИИ", "VACANCIES", "VACANCES"] },
+        { id: "#КОНТАКТЫ", name: ["КОНТАКТЫ", "CONTACTS", "CONTACTS"] },
       ],
+    },
+    offices: {
+      type: String,
+      default: ["Наши офисы", "Our offices", "Nos bureaux"]
     }
   },
   data() {
@@ -42,4 +46,4 @@ export default {
       isHovered: false,
     };
   }
-};
+}
