@@ -7,4 +7,22 @@ export default {
         CompanyInfoBlock,
     },
     name: "TheFooter.vue",
+    methods: {
+        handleMapClick(e) {
+            this.map.on('click', function (e) {
+                this.isZoomEnabled = !this.isZoomEnabled;
+                if (this.isZoomEnabled) {
+                    this.map.dragging.enable();
+                    this.map.scrollWheelZoom.enable();
+                }
+                else {
+                    this.map.scrollWheelZoom.disable();
+                    this.map.dragging.disable();
+                }
+                if (this.clickHandler) {
+                    this.clickHandler(e);
+                }
+            }.bind(this));
+        }
+    }
 }

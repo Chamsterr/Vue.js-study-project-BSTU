@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <footer class="footer">
+  <div @mousemove.prevent="">
+    <footer class="footer" id="КОНТАКТЫ">
       <div class="mapContainer">
         <leaflet-map :lng="-0.09" :lat="51.505" :zoom="13" />
       </div>
@@ -20,13 +20,13 @@
             <a> 123456, Санкт-Петербург, Невский пр-кт 127 </a>
           </section>
           <section class="email">
-            <a> sales@log.ru </a>
+            <a href="mailto:sales@log.ru"> sales@log.ru </a>
           </section>
         </section>
 
-        <section class="phoneNumber">
-          <a> +7 (812) 344-56-65 </a>
-          <a> +7 (812) 355-56-65 </a>
+        <section class="phoneNumber" >
+          <a href="tel:7 (812) 344-56-65"> +7 (812) 344-56-65 </a>
+          <a href="tel:7 (812) 355-56-65 "> +7 (812) 355-56-65 </a>
         </section>
 
         <section class="developer">

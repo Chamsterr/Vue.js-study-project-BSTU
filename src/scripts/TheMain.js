@@ -2,6 +2,11 @@ import ImageCarousel from "../components/ImageCarousel";
 import NewImageCarousel from "../components/NewImageCarousel";
 import InfoBlock from "../components/InfoBlock";
 export default {
+  computed: {
+    langIndex() {
+      return this.$store.getters.getLangIndex
+    },
+  },
   components: {
     ImageCarousel,
     NewImageCarousel,
@@ -10,15 +15,15 @@ export default {
   props: {
     title: {
       type: String,
-      default: "ГРУЗОВЫЕ ПЕРЕВОЗКИ",
+      default: ["ГРУЗОВЫЕ ПЕРЕВОЗКИ", "FREIGHT TRANSPORTATION", "TRANSPORT DE FRET"],
     },
     subtitle: {
       type: String,
-      default:
+      default:[
         "Перевозка крупногабаритных грузов по России и Европе. Полное экспедирование, страхование, упаковка и хранение грузов",
-    },
-    langIndex: {
-      type: Int16Array
+        "Transportation of oversized cargo in Russia and Europe. Full forwarding, insurance, packaging and storage of goods",
+        "Transport de marchandises surdimensionnées en Russie et en Europe. Expédition complète, assurance, emballage et stockage des marchandises"
+      ]
     },
   },
   data() {
