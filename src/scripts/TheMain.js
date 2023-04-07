@@ -41,11 +41,31 @@ export default {
       serviceTitle: [
         "Услуги", "Services", "Service"
       ],
-      // services: [
-      //   [["Беларусь", "Украина"], ["Belarus", "Ukraine"], ["Bélarus", "Ukraine"]],
-      //   [["Москва", "Екатеринбург", "Новосибирск", "Красноярск"], ["Moscow", "Yekaterinburg", "Novosibirsk", "Krasnoyarsk"], ["Moscou", "Ekaterinbourg", "Novossibirsk", "Krasnoïarsk"]],
-      //   [["Китай", "Япония", "Южная Корея"], ["China", "Japan", "South Korea"], ["Chine", "Japon", "Corée du Sud"]]
-      // ]
+      blocks: [
+          [["48", "офисов", "В Европе и СНГ"], ["361", "грузовиков", "Volvo, Scania"], ["1500", "сотрудников", "профессионалов"]],
+          [["48", "offices", "In Europe and the CIS"], ["361", "trucks", "Volvo, Scania"], ["1500", "employees", "professionals"]],
+          [["48", "bureaux", "En Europe et dans la CEI"], ["361", "camions", "Volvo, Scania"], ["1500", "employés", "professionnels"]],
+        ],
+      discriptionTitle: [
+          "О компании", "About company", "À propos de la société"
+      ],
+      discriptionText: [
+          "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне." +
+          " Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. " +
+          "В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, " +
+          "используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных " +
+          "изменений пять веков, но и перешагнул в электронный дизайн.",
+          "Lorem Ipsum is fish text often used in print and web design. " +
+          "Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century. " +
+          "At the time, an unnamed printer created a large collection of font sizes and shapes, using " +
+          "Lorem Ipsum to print samples. Lorem Ipsum not only successfully survived five centuries without " +
+          "noticeable changes, but also stepped into electronic design.",
+          "Lorem Ipsum est un texte de poisson souvent utilisé dans la conception imprimée et Web. " +
+          "Le Lorem Ipsum est le \"poisson\" standard des textes latins depuis le début du XVIe siècle. " +
+          "À l'époque, un imprimeur anonyme a créé une vaste collection de tailles et de formes de polices, " +
+          "en utilisant Lorem Ipsum pour imprimer des échantillons. Le Lorem Ipsum a non seulement survécu avec " +
+          "succès à cinq siècles sans changements notables, mais il est également entré dans la conception électronique."
+      ]
     };
   },
 };
