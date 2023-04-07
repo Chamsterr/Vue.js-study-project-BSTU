@@ -47,7 +47,7 @@
 
     <div class="greyArea"></div>
 
-    <div class="blocks">
+    <div id="УСЛУГИ" class="blocks">
       <div class="block1" v-bind:class="{'hoveredTile': isHoveredTile1}" v-on:mouseover="isHoveredTile1 = true"
       v-on:mouseout="isHoveredTile1 = false">
         <h3> {{blocks[langIndex][0][0]}} </h3>
