@@ -1,5 +1,12 @@
-
 export default {
+    computed: {
+      langIndex() {
+        return this.$store.getters.getLangIndex
+      },
+      services(){
+        return this.$store.getters.getServices
+      }
+    },
     props: {
         titles: {
             type: Array,
@@ -8,13 +15,6 @@ export default {
         subtitles: {
             type: Array,
             default: () => []
-        },
-        services: {
-            type: Array,
-            default: () => []
-        },
-        langIndex: {
-            type: Int16Array
         },
         serviceTitle: {
             type: Array
