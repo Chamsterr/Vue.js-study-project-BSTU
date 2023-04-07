@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @mousemove.prevent="">
     <footer class="footer">
       <div class="mapContainer">
         <leaflet-map :lng="-0.09" :lat="51.505" :zoom="13" />

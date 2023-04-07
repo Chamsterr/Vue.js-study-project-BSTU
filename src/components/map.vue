@@ -23,6 +23,12 @@ export default {
     }
   },
 
+  data() {
+    return {
+      isZoomEnabled: true,
+    }
+  },
+
   mounted(){
     this.initMap()
   },
@@ -32,6 +38,23 @@ export default {
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/"> OpenStreetMap <a> contributors'
       }).addTo(this.map)
+
+      this.map.scrollWheelZoom.disable();
+      this.map.dragging.disable();
+      this.map.on('click', function (e) {
+        this.isZoomEnabled = !this.isZoomEnabled;
+        if (this.isZoomEnabled) {
+          this.map.dragging.enable();
+          this.map.scrollWheelZoom.enable();
+        }
+        else {
+          this.map.scrollWheelZoom.disable();
+          this.map.dragging.disable();
+        }
+        if (this.clickHandler) {
+          this.clickHandler(e);
+        }
+      }.bind(this));
 
       this.map.on('load', () => {
         const tiles = document.getElementsByClassName('leaflet-tile')
