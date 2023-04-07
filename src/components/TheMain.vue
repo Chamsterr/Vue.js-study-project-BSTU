@@ -10,7 +10,7 @@
         </div>
       </div>
     </NewImageCarousel>
-    <InfoBlock :titles="titles" :subtitles="subtitles" :services="services" :langIndex="langIndex" :serviceTitle="serviceTitle"></InfoBlock>
+    <InfoBlock :titles="titles" :subtitles="subtitles" :langIndex="langIndex" :serviceTitle="serviceTitle"></InfoBlock>
 
   </main>
 </template>

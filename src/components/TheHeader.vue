@@ -4,7 +4,7 @@
     <div class="wrapper">
       <section class="contacts">
         <div>
-          <span class="language" v-for="language, index in languages" :key="language" @click="changeLang(index)">
+          <span class="language" v-for="language, index in languages" :key="language" @click="setLangIndex(index)">
             {{ language.name }}
           </span>
         </div>

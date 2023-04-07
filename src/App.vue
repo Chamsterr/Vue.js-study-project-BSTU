@@ -1,30 +1,17 @@
 <template>
-  <TheHeader :langIndex="langIndex" :changeLang="changeLang"/>
-  <TheMain :langIndex="langIndex"/>
-  <TheFooter :langIndex="langIndex"/>
+  <RouterView></RouterView>
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue'
-import TheMain from './components/TheMain.vue'
-import TheFooter from './components/TheFooter.vue'
-
-
-export default {
-  data () {
-    return {
-      langIndex: 0
-    }
-  },
-  methods: {
-    changeLang: function (newIndex) {
-      this.langIndex = newIndex
+  import MainPage from './components/MainPage.vue';
+  export default {
+    data() {
+      return {
+        isHovered: false,
+      };
     },
-  },
-  components: {
-    TheHeader,
-    TheMain,
-    TheFooter
+    components: {
+      MainPage
+    }
   }
-}
 </script>

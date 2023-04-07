@@ -1,3 +1,4 @@
+
 <template>
     <div class="infoBlock">
         <div class="services">
@@ -38,6 +39,7 @@
             </div>
         </div>
     </div>
+    <h1>{{ langIndex }}</h1>
 </template>
   
 <script src="../scripts/InfoBlock.js"></script>

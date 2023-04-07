@@ -41,11 +41,11 @@ export default {
       serviceTitle: [
         "Услуги", "Services", "Service"
       ],
-      services: [
-        [["Беларусь", "Украина"], ["Belarus", "Ukraine"], ["Bélarus", "Ukraine"]],
-        [["Москва", "Екатеринбург", "Новосибирск", "Красноярск"], ["Moscow", "Yekaterinburg", "Novosibirsk", "Krasnoyarsk"], ["Moscou", "Ekaterinbourg", "Novossibirsk", "Krasnoïarsk"]],
-        [["Китай", "Япония", "Южная Корея"], ["China", "Japan", "South Korea"], ["Chine", "Japon", "Corée du Sud"]]
-      ]
+      // services: [
+      //   [["Беларусь", "Украина"], ["Belarus", "Ukraine"], ["Bélarus", "Ukraine"]],
+      //   [["Москва", "Екатеринбург", "Новосибирск", "Красноярск"], ["Moscow", "Yekaterinburg", "Novosibirsk", "Krasnoyarsk"], ["Moscou", "Ekaterinbourg", "Novossibirsk", "Krasnoïarsk"]],
+      //   [["Китай", "Япония", "Южная Корея"], ["China", "Japan", "South Korea"], ["Chine", "Japon", "Corée du Sud"]]
+      // ]
     };
   },
 };
