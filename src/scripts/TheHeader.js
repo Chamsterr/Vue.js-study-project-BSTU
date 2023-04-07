@@ -1,9 +1,16 @@
 export default {
+  methods: {
+    setLangIndex(index) {
+      console.log(index)
+      this.$store.commit("setLangIndex", parseInt(index));
+    }  
+  },
+  computed: {
+    langIndex() {
+    return this.$store.getters.getLangIndex
+  }  
+  },
   props: {
-    langIndex: {
-      type: Int16Array,
-      default: 0
-    },
     languages: {
       type: Array,
       default: () => [
@@ -28,10 +35,6 @@ export default {
         { id: "#ВАКАНСИИ", name: ["ВАКАНСИИ"] },
         { id: "#КОНТАКТЫ", name: ["КОНТАКТЫ"] },
       ],
-    },
-    changeLang: {
-      type: Function,
-      required: true
     }
   },
   data() {

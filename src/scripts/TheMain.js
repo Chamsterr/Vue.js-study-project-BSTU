@@ -24,9 +24,9 @@ export default {
   data() {
     return {
       images: [
-        "../img/headerBackground.png",
-        "../img/headerBackground2.png",
-        "../img/headerBackground3.png",
+        "https://sun1.cosmostv-by-minsk.userapi.com/impg/STEMAih5pI4NUzeuLca6pNZaUjjORsdfgLZ70w/p8HUhVdvGXc.jpg?size=1920x620&quality=96&sign=56e11c39ab40105909f86838f458ed5a&type=album",
+        "https://sun9-40.userapi.com/impg/PU_71hVDJY4s6e_kUBkBbtZhYMwlUqTcTW_5aw/l7AOSS_OmYk.jpg?size=2560x827&quality=96&sign=8e59a807efa16ae56bdaef628649266e&type=album",
+        "https://sun9-22.userapi.com/impg/hwKSrYs2FkVhJ_EoEqVd37QP7UboTFNNkdZS7Q/Qqk08xcrYrw.jpg?size=2560x827&quality=96&sign=be0c5a2caedae5a8bac54c995266ed15&type=album",
       ],
       titles: [
         ["ГРУЗОПЕРЕВОЗКИ <br> ПО ЕВРОПЕ", "CARGO TRANSPORTING <br> ACROSS EUROPE", "FRET EUROPÉEN"],
@@ -40,11 +40,6 @@ export default {
       ],
       serviceTitle: [
         "Услуги", "Services", "Service"
-      ],
-      services: [
-        [["Беларусь", "Украина"], ["Belarus", "Ukraine"], ["Bélarus", "Ukraine"]],
-        [["Москва", "Екатеринбург", "Новосибирск", "Красноярск"], ["Moscow", "Yekaterinburg", "Novosibirsk", "Krasnoyarsk"], ["Moscou", "Ekaterinbourg", "Novossibirsk", "Krasnoïarsk"]],
-        [["Китай", "Япония", "Южная Корея"], ["China", "Japan", "South Korea"], ["Chine", "Japon", "Corée du Sud"]]
       ],
       blocks: [
           [["48", "офисов", "В Европе и СНГ"], ["361", "грузовиков", "Volvo, Scania"], ["1500", "сотрудников", "профессионалов"]],
